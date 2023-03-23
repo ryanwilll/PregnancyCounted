@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&amp;display=swap" rel="stylesheet">
+  <title>Contador de Semanas</title>
+  <script type="text/javascript" src="./src/js/index.js" defer=""></script>
+  <link rel="stylesheet" href="./src/css/index.css">
+  <link rel="shortcut icon" href="./src/images/3790560.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <main>
+    <h1>Pregnancy Counted</h1>
+
+    <form action="">
+      <input type="date" name="start-date" id="start-date">
+      <label for="start-date" id="start-label">Data DUM</label>
+      <span>até</span>
+      <input type="date" name="end-date" id="end-date">
+      <label for="end-date" id="end-label">Data 1° Atendimento</label>
+
+    </form>
+    <button class="btn-calcular" type="submit">Calcular</button>
+
+    <div id="output">
+      <div class="resultado">
+        <h2>Resultado</h2>
+        <div class="anos"><span>Anos: </span>00</div>
+        <div class="meses"><span>Meses: </span>00</div>
+        <div class="semanas"><span>Semanas: </span>00</div>
+        <div class="dias"><span>Dias: </span>00</div>
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+
+</html>

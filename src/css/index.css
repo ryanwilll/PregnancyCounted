@@ -1,0 +1,193 @@
+:root {
+  font-size: 52.6%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background: hsla(339, 100%, 55%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(339, 100%, 55%, 1) 0%,
+    hsla(197, 100%, 64%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(339, 100%, 55%, 1) 0%,
+    hsla(197, 100%, 64%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(339, 100%, 55%, 1) 0%,
+    hsla(197, 100%, 64%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF1B6B", endColorstr="#45CAFF", GradientType=1 );
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+span {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  margin-bottom: 6rem;
+}
+
+button {
+  display: grid;
+  width: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.error {
+  width: 50%;
+}
+
+input {
+  width: 20.5rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+}
+
+input#end-date {
+  position: relative;
+}
+
+label#end-label {
+  position: absolute;
+  left: 0.5rem;
+  top: -1.7rem;
+}
+label#start-label {
+  position: absolute;
+  top: -1.7rem;
+  right: 0.5rem;
+}
+
+label {
+  font-size: 1.3rem;
+}
+
+/* Removes the clear button from date inputs */
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+/* Removes the spin button */
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+/* Always display the drop down caret */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #2c3e50;
+}
+
+/* A few custom styles for date inputs */
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  color: #95a5a6;
+  font-family: "Helvetica", arial, sans-serif;
+  font-size: 18px;
+  border: 1px solid #ecf0f1;
+  background: #ecf0f1;
+  padding: 5px;
+  display: inline-block !important;
+  visibility: visible !important;
+}
+
+input[type="date"],
+focus {
+  color: #95a5a6;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+.btn-calcular {
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: hsla(194 100% 69% / 1);
+  --btn-bg-2: hsla(217 100% 56% / 1);
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5em;
+  cursor: pointer;
+  padding: 0.9em 1.4em;
+  min-width: 120px;
+  min-height: 44px;
+  font-size: 1.8rem;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(
+    325deg,
+    var(--btn-bg-2) 0%,
+    var(--btn-bg-1) 55%,
+    var(--btn-bg-2) 90%
+  );
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5),
+    0px 5px 5px -1px rgba(58, 125, 233, 0.25),
+    inset 4px 4px 8px rgba(175, 230, 255, 0.5),
+    inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+  background-repeat: no-repeat;
+}
+
+.btn-calcular:hover {
+  background-position: right top;
+}
+
+.btn-calcular:is(:focus, :focus-within, :active) {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+}
+.resultado.visible {
+  text-align: center;
+  transition: ease-in-out 1s all;
+  visibility: visible;
+  height: max-content;
+  opacity: 1;
+}
+
+.resultado {
+  visibility: hidden;
+  opacity: 0;
+  height: 2rem;
+}
+
+h2 {
+  font-size: 4rem;
+  margin: 6rem 0;
+}
+
+.resultado > div {
+  font-size: 2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-calcular {
+    transition: linear;
+  }
+}
