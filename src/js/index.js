@@ -56,6 +56,7 @@ function exibirDados(anos, meses, semanas, dias) {
   if (!isNaN(dias)) {
     resultado.classList.add("visible");
   } else {
+    alert("🐞 Ops...\n\nParece que você esqueceu de selecionar alguma data...");
     resultado.classList.remove("visible");
   }
 }

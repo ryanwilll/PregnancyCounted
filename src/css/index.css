@@ -72,12 +72,12 @@ input#end-date {
   position: relative;
 }
 
-label#end-label {
+label#dum-label {
   position: absolute;
   left: 0.5rem;
   top: -1.7rem;
 }
-label#start-label {
+label#atendimento-label {
   position: absolute;
   top: -1.7rem;
   right: 0.5rem;
